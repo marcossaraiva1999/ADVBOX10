@@ -1,0 +1,333 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AEDABD88-0985-4124-A71E-17D740AD754F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ADVBOX</RootNamespace>
+    <AssemblyName>ADVBOX</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>internet_19784.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>ADVBOX.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="cadastro.cs" />
+    <Compile Include="comandosoftDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>comandosoftDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="comandosoftDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>comandosoftDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="comandosoftDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>comandosoftDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="conect.cs">
+      <DependentUpon>conect.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="conect.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>conect.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Conexao.cs" />
+    <Compile Include="DataSetClientes.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetClientes.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBuscarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBuscarCliente.Designer.cs">
+      <DependentUpon>frmBuscarCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBuscarCustodia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBuscarCustodia.Designer.cs">
+      <DependentUpon>frmBuscarCustodia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBuscarPagar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBuscarPagar.Designer.cs">
+      <DependentUpon>frmBuscarPagar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCadastraSecret.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCadastraSecret.Designer.cs">
+      <DependentUpon>frmCadastraSecret.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmClientes.Designer.cs">
+      <DependentUpon>frmClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCustodia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCustodia.Designer.cs">
+      <DependentUpon>frmCustodia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEditarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEditarCliente.Designer.cs">
+      <DependentUpon>frmEditarCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEditarCustodia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEditarCustodia.Designer.cs">
+      <DependentUpon>frmEditarCustodia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmInserirCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInserirCliente.Designer.cs">
+      <DependentUpon>frmInserirCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReceber.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReceber.Designer.cs">
+      <DependentUpon>frmReceber.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="receberDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>receberDataSet.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBuscarCliente.resx">
+      <DependentUpon>frmBuscarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBuscarCustodia.resx">
+      <DependentUpon>frmBuscarCustodia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBuscarPagar.resx">
+      <DependentUpon>frmBuscarPagar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCadastraSecret.resx">
+      <DependentUpon>frmCadastraSecret.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmClientes.resx">
+      <DependentUpon>frmClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCustodia.resx">
+      <DependentUpon>frmCustodia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEditarCliente.resx">
+      <DependentUpon>frmEditarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEditarCustodia.resx">
+      <DependentUpon>frmEditarCustodia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInserirCliente.resx">
+      <DependentUpon>frmInserirCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReceber.resx">
+      <DependentUpon>frmReceber.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="comandosoftDataSet.xsc">
+      <DependentUpon>comandosoftDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="comandosoftDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>comandosoftDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="comandosoftDataSet.xss">
+      <DependentUpon>comandosoftDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="comandosoftDataSet1.xsc">
+      <DependentUpon>comandosoftDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="comandosoftDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>comandosoftDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="comandosoftDataSet1.xss">
+      <DependentUpon>comandosoftDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="comandosoftDataSet2.xsc">
+      <DependentUpon>comandosoftDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="comandosoftDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>comandosoftDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="comandosoftDataSet2.xss">
+      <DependentUpon>comandosoftDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="conect.xsc">
+      <DependentUpon>conect.xsd</DependentUpon>
+    </None>
+    <None Include="conect.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>conect.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="conect.xss">
+      <DependentUpon>conect.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetClientes.xsc">
+      <DependentUpon>DataSetClientes.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetClientes.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetClientes.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSetClientes.xss">
+      <DependentUpon>DataSetClientes.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="receberDataSet.xsc">
+      <DependentUpon>receberDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="receberDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>receberDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="receberDataSet.xss">
+      <DependentUpon>receberDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Resources\geral_adulto-300x300.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_member.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\diagrama-de-circuito-de-tecnologia-azul-com-luzes-de-linha-brilhante_1017-17266.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search_member.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\39658656-law-wallpapers-2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cry_money.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cstd_member.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="internet_19784.ico" />
+    <None Include="Resources\delete_delete_exit_1577.png" />
+    <None Include="Resources\key_lock_15105.png" />
+    <None Include="Resources\mbrilogin_99599.png" />
+    <None Include="Resources\logout1.png" />
+    <None Include="Resources\fundo-slider-01.jpg" />
+    <None Include="Resources\ok_ico.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\clientes.DAL\clientes.DAL.csproj">
+      <Project>{a8b551bb-124d-4a71-bd7b-f4eed3c644b6}</Project>
+      <Name>clientes.DAL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
